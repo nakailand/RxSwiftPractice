@@ -220,6 +220,7 @@
 				TargetAttributes = {
 					D45A111E1C54CE5A00B35FDD = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = GGWT95G6NK;
 					};
 					D45A11321C54CE5A00B35FDD = {
 						CreatedOnToolsVersion = 7.2;
@@ -475,7 +476,9 @@
 			baseConfigurationReference = 03DF52E0A70A892A1F8DF93A /* Pods-RxSwiftPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RxSwiftPractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nakailand.RxSwiftPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -487,7 +490,9 @@
 			baseConfigurationReference = 4131BE0B034FF8A1DB1835DB /* Pods-RxSwiftPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RxSwiftPractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nakailand.RxSwiftPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
