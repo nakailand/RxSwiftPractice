@@ -14,16 +14,16 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     let disposeBag = DisposeBag()
-    var str = Variable("aa")
     override func viewDidLoad() {
         super.viewDidLoad()
         let items = Observable.just([
-            str
+            "aa",
+            "bb"
             ])
 
         items
             .bindTo(tableView.rx_itemsWithCellIdentifier("Cell", cellType: UITableViewCell.self)) { (row, element, cell) in
-                element.asObservable().bindTo(cell.textLabel!.rx_text).addDisposableTo(self.disposeBag)
+                cell.textLabel?.text = element
             }
             .addDisposableTo(disposeBag)
 
