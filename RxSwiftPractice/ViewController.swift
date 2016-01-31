@@ -31,7 +31,13 @@ class ViewController: UIViewController {
         tableView
             .rx_modelSelected(String)
             .subscribeNext { value in
-                print(value)
+                switch value {
+                case "aa":
+                    let buttonViewController = UIStoryboard(name: "Button", bundle: nil).instantiateInitialViewController() as! ButtonViewController
+                    self.navigationController?.pushViewController(buttonViewController, animated: true)
+                case "bb": break
+                default: break
+                }
             }
             .addDisposableTo(disposeBag)
     }
