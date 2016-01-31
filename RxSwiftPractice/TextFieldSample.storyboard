@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EQw-CD-xRf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Text Field Sample View Controller-->
+        <scene sceneID="Max-F5-bS9">
+            <objects>
+                <viewController id="EQw-CD-xRf" customClass="TextFieldSampleViewController" customModule="RxSwiftPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x4n-4e-DtM"/>
+                        <viewControllerLayoutGuide type="bottom" id="5fx-TP-58Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ar1-0p-yNS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBq-b6-Bzb">
+                                <rect key="frame" x="155.5" y="42" width="289" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="289" id="sLs-1X-CXv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ki-1W-Z0H">
+                                <rect key="frame" x="279" y="112" width="42" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Ki-1W-Z0H" firstAttribute="centerX" secondItem="Ar1-0p-yNS" secondAttribute="centerX" id="Ydj-Mx-lak"/>
+                            <constraint firstItem="3Ki-1W-Z0H" firstAttribute="top" secondItem="aBq-b6-Bzb" secondAttribute="bottom" constant="40" id="cdv-r4-kWr"/>
+                            <constraint firstItem="aBq-b6-Bzb" firstAttribute="centerX" secondItem="Ar1-0p-yNS" secondAttribute="centerX" id="dhl-SV-ZCF"/>
+                            <constraint firstItem="aBq-b6-Bzb" firstAttribute="top" secondItem="x4n-4e-DtM" secondAttribute="bottom" constant="22" id="mqt-Bx-Nnd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="3Ki-1W-Z0H" id="ah5-rd-516"/>
+                        <outlet property="textField" destination="aBq-b6-Bzb" id="DN1-jB-Rzk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IvL-tA-MdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="436"/>
+        </scene>
+    </scenes>
+</document>

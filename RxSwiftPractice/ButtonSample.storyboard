@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Button View Controller-->
+        <!--Button Sample View Controller-->
         <scene sceneID="dNW-bC-jgo">
             <objects>
-                <viewController id="3fS-Qf-e4t" customClass="ButtonViewController" customModule="RxSwiftPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3fS-Qf-e4t" customClass="ButtonSampleViewController" customModule="RxSwiftPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DRy-ED-a2J"/>
                         <viewControllerLayoutGuide type="bottom" id="LCe-oD-Tuw"/>

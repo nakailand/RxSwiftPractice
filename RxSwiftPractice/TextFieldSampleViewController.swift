@@ -1,5 +1,5 @@
 //
-//  ButtonSampleViewController.swift
+//  TextFieldSampleViewController.swift
 //  RxSwiftPractice
 //
 //  Created by nakazy on 2016/02/01.
@@ -10,17 +10,17 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ButtonSampleViewController: UIViewController {
+class TextFieldSampleViewController: UIViewController {
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var label: UILabel!
     
-    @IBOutlet weak var button: UIButton!
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        button.rx_tap
-            .subscribeNext {
-                print("tap")
-            }
-        .addDisposableTo(disposeBag)
+        textField
+            .rx_text
+            .bindTo(label.rx_text)
+            .addDisposableTo(disposeBag)
     }
     
     override func didReceiveMemoryWarning() {

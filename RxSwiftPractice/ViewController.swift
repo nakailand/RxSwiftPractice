@@ -12,32 +12,22 @@ import RxCocoa
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textFieldSampleButton: UIButton!
+    @IBOutlet weak var button: UIButton!
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let items = Observable.just([
-            "aa",
-            "bb"
-            ])
-
-        items
-            .bindTo(tableView.rx_itemsWithCellIdentifier("Cell", cellType: UITableViewCell.self)) { (row, element, cell) in
-                cell.textLabel?.text = element
+        button.rx_tap
+            .subscribeNext {
+                let buttonSampleViewController = UIStoryboard(name: "ButtonSample", bundle: nil).instantiateInitialViewController()
+                self.navigationController?.pushViewController(buttonSampleViewController!, animated: true)
             }
             .addDisposableTo(disposeBag)
-
-
-        tableView
-            .rx_modelSelected(String)
-            .subscribeNext { value in
-                switch value {
-                case "aa":
-                    let buttonViewController = UIStoryboard(name: "Button", bundle: nil).instantiateInitialViewController() as! ButtonViewController
-                    self.navigationController?.pushViewController(buttonViewController, animated: true)
-                case "bb": break
-                default: break
-                }
+        
+        textFieldSampleButton.rx_tap
+            .subscribeNext {
+                let textFieldSampleViewController = UIStoryboard(name: "TextFieldSample", bundle: nil).instantiateInitialViewController()
+                self.navigationController?.pushViewController(textFieldSampleViewController!, animated: true)
             }
             .addDisposableTo(disposeBag)
     }
