@@ -21,6 +21,15 @@ class TextFieldSampleViewController: UIViewController {
             .rx_text
             .bindTo(label.rx_text)
             .addDisposableTo(disposeBag)
+        
+        NSNotificationCenter.defaultCenter().rx_notification(UIKeyboardWillShowNotification, object: nil)
+            .subscribeNext { notification in
+                guard let userInfo = notification.userInfo, keyboardRect = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else {
+                    return
+                }
+                print(keyboardRect.CGRectValue())
+            }
+            .addDisposableTo(disposeBag)
     }
     
     override func didReceiveMemoryWarning() {
