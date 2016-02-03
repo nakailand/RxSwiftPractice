@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84A157371C5E5EF40078E77B /* ButtonSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A157361C5E5EF40078E77B /* ButtonSample.storyboard */; settings = {ASSET_TAGS = (); }; };
-		84A157391C5E5F190078E77B /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A157381C5E5F190078E77B /* ButtonViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		84A1573B1C5E754C0078E77B /* TextFieldSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1573A1C5E754C0078E77B /* TextFieldSampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		84A1573D1C5E755A0078E77B /* TextFieldSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A1573C1C5E755A0078E77B /* TextFieldSample.storyboard */; settings = {ASSET_TAGS = (); }; };
+		84A157371C5E5EF40078E77B /* ButtonSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A157361C5E5EF40078E77B /* ButtonSample.storyboard */; };
+		84A157391C5E5F190078E77B /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A157381C5E5F190078E77B /* ButtonViewController.swift */; };
+		84A1573B1C5E754C0078E77B /* TextFieldSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1573A1C5E754C0078E77B /* TextFieldSampleViewController.swift */; };
+		84A1573D1C5E755A0078E77B /* TextFieldSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A1573C1C5E755A0078E77B /* TextFieldSample.storyboard */; };
 		D45A11231C54CE5A00B35FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A11221C54CE5A00B35FDD /* AppDelegate.swift */; };
 		D45A11251C54CE5A00B35FDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A11241C54CE5A00B35FDD /* ViewController.swift */; };
 		D45A11281C54CE5A00B35FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A11261C54CE5A00B35FDD /* Main.storyboard */; };
@@ -107,12 +107,12 @@
 		D45A11161C54CE5A00B35FDD = {
 			isa = PBXGroup;
 			children = (
+				85D3ACA0DA2045748F8A534F /* Frameworks */,
+				33FAD7B8E2C9D59702EBB687 /* Pods */,
+				D45A11201C54CE5A00B35FDD /* Products */,
 				D45A11211C54CE5A00B35FDD /* RxSwiftPractice */,
 				D45A11361C54CE5A00B35FDD /* RxSwiftPracticeTests */,
 				D45A11411C54CE5A00B35FDD /* RxSwiftPracticeUITests */,
-				D45A11201C54CE5A00B35FDD /* Products */,
-				33FAD7B8E2C9D59702EBB687 /* Pods */,
-				85D3ACA0DA2045748F8A534F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,15 +130,15 @@
 			isa = PBXGroup;
 			children = (
 				D45A11221C54CE5A00B35FDD /* AppDelegate.swift */,
-				D45A11241C54CE5A00B35FDD /* ViewController.swift */,
-				D45A11261C54CE5A00B35FDD /* Main.storyboard */,
-				84A157361C5E5EF40078E77B /* ButtonSample.storyboard */,
 				D45A11291C54CE5A00B35FDD /* Assets.xcassets */,
+				84A157361C5E5EF40078E77B /* ButtonSample.storyboard */,
 				84A157381C5E5F190078E77B /* ButtonViewController.swift */,
+				D45A112E1C54CE5A00B35FDD /* Info.plist */,
+				D45A112B1C54CE5A00B35FDD /* LaunchScreen.storyboard */,
+				D45A11261C54CE5A00B35FDD /* Main.storyboard */,
 				84A1573C1C5E755A0078E77B /* TextFieldSample.storyboard */,
 				84A1573A1C5E754C0078E77B /* TextFieldSampleViewController.swift */,
-				D45A112B1C54CE5A00B35FDD /* LaunchScreen.storyboard */,
-				D45A112E1C54CE5A00B35FDD /* Info.plist */,
+				D45A11241C54CE5A00B35FDD /* ViewController.swift */,
 			);
 			path = RxSwiftPractice;
 			sourceTree = "<group>";
@@ -146,8 +146,8 @@
 		D45A11361C54CE5A00B35FDD /* RxSwiftPracticeTests */ = {
 			isa = PBXGroup;
 			children = (
-				D45A11371C54CE5A00B35FDD /* RxSwiftPracticeTests.swift */,
 				D45A11391C54CE5A00B35FDD /* Info.plist */,
+				D45A11371C54CE5A00B35FDD /* RxSwiftPracticeTests.swift */,
 			);
 			path = RxSwiftPracticeTests;
 			sourceTree = "<group>";
@@ -155,8 +155,8 @@
 		D45A11411C54CE5A00B35FDD /* RxSwiftPracticeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D45A11421C54CE5A00B35FDD /* RxSwiftPracticeUITests.swift */,
 				D45A11441C54CE5A00B35FDD /* Info.plist */,
+				D45A11421C54CE5A00B35FDD /* RxSwiftPracticeUITests.swift */,
 			);
 			path = RxSwiftPracticeUITests;
 			sourceTree = "<group>";
@@ -391,6 +391,7 @@
 				D45A11271C54CE5A00B35FDD /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		D45A112B1C54CE5A00B35FDD /* LaunchScreen.storyboard */ = {
@@ -399,6 +400,7 @@
 				D45A112C1C54CE5A00B35FDD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
