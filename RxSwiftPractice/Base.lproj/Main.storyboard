@@ -27,19 +27,27 @@
                                 <animations/>
                                 <state key="normal" title="TextFieldSample"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le6-Sg-B05">
+                                <rect key="frame" x="240" y="268" width="121" height="30"/>
+                                <animations/>
+                                <state key="normal" title="TableViewSample"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7Gt-xy-CSW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Sb-Nq-Hil"/>
+                            <constraint firstItem="Le6-Sg-B05" firstAttribute="top" secondItem="7Gt-xy-CSW" secondAttribute="bottom" constant="41" id="8sw-Y7-27I"/>
                             <constraint firstItem="wtC-Z5-e4Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dj2-T3-3X9"/>
                             <constraint firstItem="wtC-Z5-e4Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="FxN-he-Sv7"/>
                             <constraint firstItem="7Gt-xy-CSW" firstAttribute="top" secondItem="wtC-Z5-e4Z" secondAttribute="bottom" constant="69" id="poe-T6-3jt"/>
+                            <constraint firstItem="Le6-Sg-B05" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzM-d2-MQF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rpj-jy-X25"/>
                     <connections>
                         <outlet property="button" destination="wtC-Z5-e4Z" id="CLJ-dv-Z5b"/>
+                        <outlet property="tableViewSampleButton" destination="Le6-Sg-B05" id="3pa-bs-gHh"/>
                         <outlet property="textFieldSampleButton" destination="7Gt-xy-CSW" id="BXs-we-GuF"/>
                     </connections>
                 </viewController>

@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var textFieldSampleButton: UIButton!
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var tableViewSampleButton: UIButton!
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,13 @@ class ViewController: UIViewController {
             .subscribeNext {
                 let textFieldSampleViewController = UIStoryboard(name: "TextFieldSample", bundle: nil).instantiateInitialViewController()
                 self.navigationController?.pushViewController(textFieldSampleViewController!, animated: true)
+            }
+            .addDisposableTo(disposeBag)
+        
+        tableViewSampleButton.rx_tap
+            .subscribeNext {
+                let tableViewSampleViewController = UIStoryboard(name: "TableViewSample", bundle: nil).instantiateInitialViewController()
+                self.navigationController?.pushViewController(tableViewSampleViewController!, animated: true)
             }
             .addDisposableTo(disposeBag)
     }
