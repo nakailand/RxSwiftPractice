@@ -27,6 +27,13 @@ final class TableViewSampleViewController: UIViewController {
                 cell.textLabel?.text = element
             }
             .addDisposableTo(disposeBag)
+        
+        tableView.rx_itemSelected
+            .subscribeNext { [unowned self] in
+                let cell = self.tableView.cellForRowAtIndexPath($0)
+                print(cell?.textLabel?.text)
+        }
+        .addDisposableTo(disposeBag)
     }
     
     override func didReceiveMemoryWarning() {

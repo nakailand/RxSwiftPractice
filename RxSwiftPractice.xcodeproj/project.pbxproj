@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84A157371C5E5EF40078E77B /* ButtonSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A157361C5E5EF40078E77B /* ButtonSample.storyboard */; settings = {ASSET_TAGS = (); }; };
-		84A157391C5E5F190078E77B /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A157381C5E5F190078E77B /* ButtonViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		84A1573B1C5E754C0078E77B /* TextFieldSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1573A1C5E754C0078E77B /* TextFieldSampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		84A1573D1C5E755A0078E77B /* TextFieldSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A1573C1C5E755A0078E77B /* TextFieldSample.storyboard */; settings = {ASSET_TAGS = (); }; };
-		84A157421C663EBA0078E77B /* TableViewSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A157411C663EB90078E77B /* TableViewSampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		84A157441C663ECB0078E77B /* TableViewSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A157431C663ECB0078E77B /* TableViewSample.storyboard */; settings = {ASSET_TAGS = (); }; };
+		84A157371C5E5EF40078E77B /* ButtonSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A157361C5E5EF40078E77B /* ButtonSample.storyboard */; };
+		84A157391C5E5F190078E77B /* ButtonSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A157381C5E5F190078E77B /* ButtonSampleViewController.swift */; };
+		84A1573B1C5E754C0078E77B /* TextFieldSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1573A1C5E754C0078E77B /* TextFieldSampleViewController.swift */; };
+		84A1573D1C5E755A0078E77B /* TextFieldSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A1573C1C5E755A0078E77B /* TextFieldSample.storyboard */; };
+		84A157421C663EBA0078E77B /* TableViewSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A157411C663EB90078E77B /* TableViewSampleViewController.swift */; };
+		84A157441C663ECB0078E77B /* TableViewSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A157431C663ECB0078E77B /* TableViewSample.storyboard */; };
 		D45A11231C54CE5A00B35FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A11221C54CE5A00B35FDD /* AppDelegate.swift */; };
 		D45A11251C54CE5A00B35FDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A11241C54CE5A00B35FDD /* ViewController.swift */; };
 		D45A11281C54CE5A00B35FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A11261C54CE5A00B35FDD /* Main.storyboard */; };
@@ -45,7 +45,7 @@
 		4131BE0B034FF8A1DB1835DB /* Pods-RxSwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
 		68735F03C0E49022889C8C05 /* Pods_RxSwiftPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A157361C5E5EF40078E77B /* ButtonSample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ButtonSample.storyboard; sourceTree = "<group>"; };
-		84A157381C5E5F190078E77B /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		84A157381C5E5F190078E77B /* ButtonSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSampleViewController.swift; sourceTree = "<group>"; };
 		84A1573A1C5E754C0078E77B /* TextFieldSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldSampleViewController.swift; sourceTree = "<group>"; };
 		84A1573C1C5E755A0078E77B /* TextFieldSample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextFieldSample.storyboard; sourceTree = "<group>"; };
 		84A157411C663EB90078E77B /* TableViewSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSampleViewController.swift; sourceTree = "<group>"; };
@@ -135,17 +135,13 @@
 			children = (
 				D45A11221C54CE5A00B35FDD /* AppDelegate.swift */,
 				D45A11291C54CE5A00B35FDD /* Assets.xcassets */,
-<<<<<<< HEAD
 				84A157411C663EB90078E77B /* TableViewSampleViewController.swift */,
-				84A157381C5E5F190078E77B /* ButtonViewController.swift */,
+				84A157381C5E5F190078E77B /* ButtonSampleViewController.swift */,
 				84A157431C663ECB0078E77B /* TableViewSample.storyboard */,
-=======
 				84A157361C5E5EF40078E77B /* ButtonSample.storyboard */,
-				84A157381C5E5F190078E77B /* ButtonViewController.swift */,
 				D45A112E1C54CE5A00B35FDD /* Info.plist */,
 				D45A112B1C54CE5A00B35FDD /* LaunchScreen.storyboard */,
 				D45A11261C54CE5A00B35FDD /* Main.storyboard */,
->>>>>>> 3762e239599f22f9cb69829b14a2efe3270e7d42
 				84A1573C1C5E755A0078E77B /* TextFieldSample.storyboard */,
 				84A1573A1C5E754C0078E77B /* TextFieldSampleViewController.swift */,
 				D45A11241C54CE5A00B35FDD /* ViewController.swift */,
@@ -360,7 +356,7 @@
 				84A1573B1C5E754C0078E77B /* TextFieldSampleViewController.swift in Sources */,
 				D45A11251C54CE5A00B35FDD /* ViewController.swift in Sources */,
 				84A157421C663EBA0078E77B /* TableViewSampleViewController.swift in Sources */,
-				84A157391C5E5F190078E77B /* ButtonViewController.swift in Sources */,
+				84A157391C5E5F190078E77B /* ButtonSampleViewController.swift in Sources */,
 				D45A11231C54CE5A00B35FDD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

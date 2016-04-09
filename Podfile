@@ -2,8 +2,8 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'RxSwiftPractice' do
-    pod 'RxSwift', '~> 2.1.0'
-    pod 'RxCocoa', '~> 2.1.0'
+    pod 'RxSwift', '~> 2.3.1'
+    pod 'RxCocoa', '~> 2.3.1'
 end
 
 target 'RxSwiftPracticeTests' do

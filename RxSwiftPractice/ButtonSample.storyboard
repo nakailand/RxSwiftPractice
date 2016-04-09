@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3fS-Qf-e4t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3fS-Qf-e4t">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Button Sample View Controller-->
@@ -18,20 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWf-lC-qvZ">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <animations/>
+                                <rect key="frame" x="269" y="285" width="63" height="30"/>
+                                <state key="normal" title="RxButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBd-OR-yZp">
+                                <rect key="frame" x="277" y="359" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LBd-OR-yZp" firstAttribute="top" secondItem="hWf-lC-qvZ" secondAttribute="bottom" constant="44" id="0b0-Oj-gnX"/>
                             <constraint firstItem="hWf-lC-qvZ" firstAttribute="centerY" secondItem="0li-P5-9Ef" secondAttribute="centerY" id="4mw-Hx-lPV"/>
+                            <constraint firstItem="LBd-OR-yZp" firstAttribute="centerX" secondItem="0li-P5-9Ef" secondAttribute="centerX" id="QJD-T3-r6W"/>
                             <constraint firstItem="hWf-lC-qvZ" firstAttribute="centerX" secondItem="0li-P5-9Ef" secondAttribute="centerX" id="ZFB-Tk-opy"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button" destination="hWf-lC-qvZ" id="Mgu-Bz-x4u"/>
+                        <outlet property="button" destination="LBd-OR-yZp" id="bmq-3m-cVU"/>
+                        <outlet property="rxButton" destination="hWf-lC-qvZ" id="wmI-cK-4u4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5y-eq-p4w" userLabel="First Responder" sceneMemberID="firstResponder"/>

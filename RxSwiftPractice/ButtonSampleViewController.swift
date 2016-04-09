@@ -12,20 +12,35 @@ import RxCocoa
 
 class ButtonSampleViewController: UIViewController {
     
+    @IBOutlet weak var rxButton: UIButton!
     @IBOutlet weak var button: UIButton!
     let disposeBag = DisposeBag()
+    private var count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        button.rx_tap
+        
+        rxButton.rx_tap
+            .take(5)
             .subscribeNext {
-                print("tap")
+                print("rxButton tap")
             }
         .addDisposableTo(disposeBag)
+        
+        button.addTarget(self, action: #selector(ButtonSampleViewController.tap), forControlEvents: .TouchUpInside)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tap() {
+        if count >= 5 {
+            return
+        } else {
+            print("button tap")
+        }
+        count += 1
     }
 }
 
