@@ -27,22 +27,31 @@ class TextFieldSampleViewController: UIViewController {
     private let helloString = "hello"
     private var userName = ""
     private var password = ""
+
+    let text = Variable<String>("")
+
     enum TextFieldType {
         case userNameTextField, passwordTextField
     }
     
-    
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // RxのBind
+
+        // MARK: textField
         rxTextField
             .rx_text
-            .skip(1)
             .bindTo(rxLabel.rx_text)
             .addDisposableTo(disposeBag)
-        
+
+        rxTextField.rx_text
+            .subscribeNext { [unowned self] in
+                self.text.value = $0
+        }
+        .addDisposableTo(disposeBag)
+
         // Bind
         textField.delegate = self
         

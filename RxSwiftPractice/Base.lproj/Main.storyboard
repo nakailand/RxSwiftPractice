@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zkO-OI-ZZk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zkO-OI-ZZk">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -27,16 +27,23 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le6-Sg-B05">
                                 <rect key="frame" x="240" y="268" width="121" height="30"/>
-                                <animations/>
                                 <state key="normal" title="TableViewSample"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQL-iM-ckj">
+                                <rect key="frame" x="279" y="362" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7Gt-xy-CSW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Sb-Nq-Hil"/>
                             <constraint firstItem="Le6-Sg-B05" firstAttribute="top" secondItem="7Gt-xy-CSW" secondAttribute="bottom" constant="41" id="8sw-Y7-27I"/>
+                            <constraint firstItem="CQL-iM-ckj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AXy-6w-CfD"/>
                             <constraint firstItem="wtC-Z5-e4Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dj2-T3-3X9"/>
                             <constraint firstItem="wtC-Z5-e4Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="FxN-he-Sv7"/>
+                            <constraint firstItem="CQL-iM-ckj" firstAttribute="top" secondItem="Le6-Sg-B05" secondAttribute="bottom" constant="64" id="JTe-Fd-Tfg"/>
                             <constraint firstItem="7Gt-xy-CSW" firstAttribute="top" secondItem="wtC-Z5-e4Z" secondAttribute="bottom" constant="69" id="poe-T6-3jt"/>
                             <constraint firstItem="Le6-Sg-B05" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzM-d2-MQF"/>
                         </constraints>
@@ -44,6 +51,7 @@
                     <navigationItem key="navigationItem" id="rpj-jy-X25"/>
                     <connections>
                         <outlet property="button" destination="wtC-Z5-e4Z" id="CLJ-dv-Z5b"/>
+                        <outlet property="rxLabel" destination="CQL-iM-ckj" id="e7F-L1-mqf"/>
                         <outlet property="tableViewSampleButton" destination="Le6-Sg-B05" id="3pa-bs-gHh"/>
                         <outlet property="textFieldSampleButton" destination="7Gt-xy-CSW" id="BXs-we-GuF"/>
                     </connections>

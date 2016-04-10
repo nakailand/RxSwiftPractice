@@ -18,14 +18,16 @@ class ButtonSampleViewController: UIViewController {
     private var count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Rx
         rxButton.rx_tap
             .take(5)
             .subscribeNext {
                 print("rxButton tap")
             }
         .addDisposableTo(disposeBag)
-        
+
+        // Normal
         button.addTarget(self, action: #selector(ButtonSampleViewController.tap), forControlEvents: .TouchUpInside)
     }
     
@@ -33,7 +35,6 @@ class ButtonSampleViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     func tap() {
         if count >= 5 {
             return

@@ -12,6 +12,7 @@ import RxCocoa
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var rxLabel: UILabel!
     @IBOutlet weak var textFieldSampleButton: UIButton!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var tableViewSampleButton: UIButton!
@@ -21,14 +22,23 @@ class ViewController: UIViewController {
         button.rx_tap
             .subscribeNext {
                 let buttonSampleViewController = UIStoryboard(name: "ButtonSample", bundle: nil).instantiateInitialViewController()
+
                 self.navigationController?.pushViewController(buttonSampleViewController!, animated: true)
             }
             .addDisposableTo(disposeBag)
         
         textFieldSampleButton.rx_tap
             .subscribeNext {
-                let textFieldSampleViewController = UIStoryboard(name: "TextFieldSample", bundle: nil).instantiateInitialViewController()
-                self.navigationController?.pushViewController(textFieldSampleViewController!, animated: true)
+                let textFieldSampleViewController = UIStoryboard(name: "TextFieldSample", bundle: nil).instantiateInitialViewController() as! TextFieldSampleViewController
+
+                textFieldSampleViewController.text
+                    .asObservable()
+                    .subscribeNext { [unowned self] text in
+                        self.rxLabel.text = text
+                    }
+                    .addDisposableTo(self.disposeBag)
+
+                self.navigationController?.pushViewController(textFieldSampleViewController, animated: true)
             }
             .addDisposableTo(disposeBag)
         
