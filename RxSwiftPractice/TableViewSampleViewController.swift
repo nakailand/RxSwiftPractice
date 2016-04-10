@@ -16,7 +16,7 @@ final class TableViewSampleViewController: UIViewController {
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let items = Variable<[String]>([
+        let items = Driver.just([
             "First Item",
             "Second Item",
             "Third Item"
@@ -31,8 +31,7 @@ final class TableViewSampleViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         tableView.rx_itemSelected
-            .asDriver()
-            .driveNext { [unowned self] in
+            .subscribeNext { [unowned self] in
                 let cell = self.tableView.cellForRowAtIndexPath($0)
                 print(cell?.textLabel?.text)
         }
