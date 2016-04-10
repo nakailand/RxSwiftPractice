@@ -46,11 +46,11 @@ class TextFieldSampleViewController: UIViewController {
             .bindTo(rxLabel.rx_text)
             .addDisposableTo(disposeBag)
 
-        rxTextField.rx_text
-            .subscribeNext { [unowned self] in
-                self.text.value = $0
-        }
-        .addDisposableTo(disposeBag)
+        rxTextField
+            .rx_text
+            .bindTo(text)
+            .addDisposableTo(disposeBag)
+        
 
         // Bind
         textField.delegate = self
@@ -76,10 +76,10 @@ class TextFieldSampleViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         // Rxのユーザー名、パスワードの文字数チェック
-        Observable.combineLatest(rxUserNameField.rx_text, rxPasswordField.rx_text) { (userName, password) in
-            return userName.characters.count > 5 && password.characters.count > 5
+        Driver.combineLatest(rxUserNameField.rx_text.asDriver(), rxPasswordField.rx_text.asDriver()) { (userName, password) in
+            userName.characters.count > 5 && password.characters.count > 5
             }
-            .subscribeNext { [unowned self] enabled in
+            .driveNext { [unowned self] enabled in
                 self.rxButton.enabled = enabled
             }
             .addDisposableTo(disposeBag)

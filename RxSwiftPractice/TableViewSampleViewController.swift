@@ -16,20 +16,23 @@ final class TableViewSampleViewController: UIViewController {
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let items = Observable.just([
+        let items = Variable<[String]>([
             "First Item",
             "Second Item",
-            "Third Item",
-        ])
+            "Third Item"
+            ]
+        )
         
         items
-            .bindTo(tableView.rx_itemsWithCellIdentifier("Cell", cellType: UITableViewCell.self)) { (row, element, cell) in
+            .asDriver()
+            .drive(tableView.rx_itemsWithCellIdentifier("Cell", cellType: UITableViewCell.self)) { (row, element, cell) in
                 cell.textLabel?.text = element
             }
             .addDisposableTo(disposeBag)
         
         tableView.rx_itemSelected
-            .subscribeNext { [unowned self] in
+            .asDriver()
+            .driveNext { [unowned self] in
                 let cell = self.tableView.cellForRowAtIndexPath($0)
                 print(cell?.textLabel?.text)
         }

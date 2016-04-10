@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         button.rx_tap
-            .subscribeNext {
+            .asDriver()
+            .driveNext {
                 let buttonSampleViewController = UIStoryboard(name: "ButtonSample", bundle: nil).instantiateInitialViewController()
 
                 self.navigationController?.pushViewController(buttonSampleViewController!, animated: true)
@@ -28,14 +29,13 @@ class ViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         textFieldSampleButton.rx_tap
-            .subscribeNext {
+            .asDriver()
+            .driveNext {
                 let textFieldSampleViewController = UIStoryboard(name: "TextFieldSample", bundle: nil).instantiateInitialViewController() as! TextFieldSampleViewController
 
                 textFieldSampleViewController.text
-                    .asObservable()
-                    .subscribeNext { [unowned self] text in
-                        self.rxLabel.text = text
-                    }
+                    .asDriver()
+                    .drive(self.rxLabel.rx_text)
                     .addDisposableTo(self.disposeBag)
 
                 self.navigationController?.pushViewController(textFieldSampleViewController, animated: true)
@@ -43,7 +43,8 @@ class ViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         tableViewSampleButton.rx_tap
-            .subscribeNext {
+            .asDriver()
+            .driveNext {
                 let tableViewSampleViewController = UIStoryboard(name: "TableViewSample", bundle: nil).instantiateInitialViewController()
                 self.navigationController?.pushViewController(tableViewSampleViewController!, animated: true)
             }
